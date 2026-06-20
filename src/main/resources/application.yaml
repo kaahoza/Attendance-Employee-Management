@@ -3,7 +3,7 @@ spring:
     name: employee-management
 
   datasource:
-    url: jdbc:postgresql://employees_vnlb_user:v2QyFSP3QWc2Kn0y11zgaPgMJX92T73p@dpg-d8rgn1n7f7vs73e1j0tg-a.oregon-postgres.render.com/employees_vnlb
+    url: jdbc:postgresql://dpg-d8rgn1n7f7vs73e1j0tg-a.oregon-postgres.render.com/employees_vnlb
     username: employees_vnlb_user
     password: v2QyFSP3QWc2Kn0y11zgaPgMJX92T73p
     driver-class-name: org.postgresql.Driver
