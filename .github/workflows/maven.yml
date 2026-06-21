@@ -24,7 +24,7 @@ jobs:
 
     steps:
       # Step 1: Download the source code from gihub
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       # Stage 2: Setup Java Environment
