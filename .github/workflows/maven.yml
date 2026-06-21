@@ -61,14 +61,5 @@ jobs:
           tags:
             ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:${{github.sha}}
-    needs:
-    with:
-    permissions:
-    name:
-    uses:
-    strategy:
-    if:
-    secrets:
-    concurrency:
 
 
