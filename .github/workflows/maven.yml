@@ -58,6 +58,6 @@ jobs:
           push: true
           tags:
             ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:${{github.sha}}
 
 
