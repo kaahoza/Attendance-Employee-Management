@@ -48,16 +48,27 @@ jobs:
           username: ${{secrets.DOCKERHUB_USERNAME}}
           password: ${{secrets.DOCKERHUB_TOKEN}}
 
+      # Set up Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
       # Step 5: Build and Push Docker Image
       - name: Build and Push Docker Image
-        if:
-          github.event_name == 'push'
-        uses: docker/build-action@v6
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: false
           tags:
             ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:${{github.sha}}
+    needs:
+    with:
+    permissions:
+    name:
+    uses:
+    strategy:
+    if:
+    secrets:
+    concurrency:
 
 
