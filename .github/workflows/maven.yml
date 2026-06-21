@@ -52,10 +52,10 @@ jobs:
       - name: Build and Push Docker Image
         if:
           github.event_name == 'push'
-        uses: docker/build-action@v5
+        uses: docker/build-action@v6
         with:
           context: .
-          push: true
+          push: false
           tags:
             ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:latest
             ${{ secrets.DOCKERHUB_USERNAME }}/employee-management:${{github.sha}}
