@@ -3,9 +3,9 @@ spring:
     name: employee-management
 
   datasource:
-    url: jdbc:postgresql://dpg-d8rgn1n7f7vs73e1j0tg-a.oregon-postgres.render.com/employees_vnlb
-    username: employees_vnlb_user
-    password: v2QyFSP3QWc2Kn0y11zgaPgMJX92T73p
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
